@@ -1,0 +1,8 @@
+## YAML Template.
+web:
+  build: .
+#  volumes:
+#   - .:/app
+  ports:
+   - "8000:80"
+   - "3306:3306"

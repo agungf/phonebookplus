@@ -1,0 +1,8 @@
+/application/cache/
+/application/logs/
+/application/models/proxies/
+/nbproject/
+/vendor/
+/bower_components/
+/deploy.php
+/makefile
