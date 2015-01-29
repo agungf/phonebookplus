@@ -1,86 +1,56 @@
-#Phonebookplus 
+# PhonebookPlus
 
-[![Build Status](https://travis-ci.org/agungf/phonebookplus.svg)](https://travis-ci.org/agungf/phonebookplus)
+Another Phonebook sharing apps plus plus
 
-Phonebookplus is scaffolding for a good standard web application, built on the top of codeigniter framework and extended with various other third party frontend/backend libraries/techonlogies. 
-This will help developers to have a kick-ass quick start along their way to better managed web application development.
+## Demo 
 
-See [Release Notes](https://github.com/agungf/phonebookplus/wiki/Release-Note)
+- Url : http://udock.cloudapp.net:8000/
+- User: admin
+- password: admin123
 
-See The [Complete List Of Libraries Used For This Project](https://github.com/agungf/phonebookplus/wiki/List-Of-Libraries-Used-Intergated)
+## The  stack
 
-[View Live Demo](http://demo.codesamplez.com/phonebookplus/)
+- bootstrap frontend
+- Mysql database persistent data layer using mongoose
+- PHP Codeigniter backend framework with smarty template engine and Doctrin ORM 
+- Docker container isolated environment deployed with Fig on Azure cloud
 
-Technical Requirement
----------------------
-- PHP version 5.3.x
-- Mysql version 5.x+ Database Engine(Should work with other db as well which doctrine support. But I haven't tested yet)
-- [Composer](http://getcomposer.org/) (to install and use third party libraries through it, which is highly recommended).
-- [Bower](http://bower.io/) to install front-end any third party packages.
+## Features
 
-Basic Site functionality
--------------------
-- Set up with modern dependency based PHP development standard.
-- Set up with modern front end development stack(bower, bootstrap, jQuery).
-- You will get ready made authentication functionality
-- An organized integrated view template structure so that you don't get lost in a sea of view files.
-- Separate view root for front-end/public pages and back-end/authenticated users' pages.
-- Basic Administration panel, to perform administration functionality. You have your freedom to add as much as you want :).
-- Integrated basic SEO settings, seo for pagination.
+- User Authentication and Authorization
 
-[See all available feature](https://github.com/agungf/phonebookplus/wiki/Feature-Details-Of-CodeIgniterPlus) in details also.
+  It should have a login with username and password so the user can access the main user interface.
+  
+- Protected Area
 
+  Once the user is logged in you will need to have a logout button where he can go out of the protected area.
 
-*nix Installation
--------------------
-- Change application/config/database.php according to your database server credential and commit locally(or add that file to .gitignore file).
-- Create a makefile as instructed on [deployment wiki](https://github.com/agungf/phonebookplus/wiki/Deployment) page.
-- run the 'make all' command.
+- Add Record
 
-Windows Installation
-------------
+  There should also be an option to add new records in the phone book which will contain: Name, Phone number, Date of adding, Additional Notes'
+  
+- Manage phonebook',
+  
+  We need to have an option to edit/delete existing records in the phone book.
+  
+- Pagination
+  
+  It needs to have a pagination for the records which are more than 10 on page. tobe improvend using angular
+  
+- Search
 
-This project is tightly coupled with composer and bower. So, make sure you have them installed and you know the basics!
+  Next will be implemented using angular for better UI/UX like http://udock.cloudapp.net:9000/phonebook
 
-- Crate a new project with your chosen name. 
-- Paste all file from CodeIgniterPlus to your project directory.
-- Run "composer update" command to get doctrine dependency installed.
-- Run "bower install" command to get latest front-end packages installed.
-- Change 'RewriteBase' on '.htaccess' file as per your your chosen name. If using root level domain, just remove it and keep as 'RewriteBase /'. 
-- Create a database with your given database name in config/database.php file.
-- Now edit config/database.php file; Here change the database server, database name, user name and password as per your database server.
-- Make sure the following directories exists(create if not) and do have write permission by the application(easy to have them with '777' mode):
-    * {root}/application/cache
-    * {root}/application/logs
-    * {root}/application/models/proxies
-- Run http://{domain_path}/home/db_schema for create database tables from the doctrine entities, automatically.
-  (Note :Every time when you update your entity file in models/entity directory just Run the above url for update existing schema.)
-- run the application, register with username 'admin'. This will cause to create default two roles 'admin' and user automatically and will 
-  make user 'admin' in 'admin' role. From this on, whenever a registration happens, all will be assigned default 'user' role.
-  (Note: If you wish to change this functionality please do so on 'application/libraries/DX_Auth.php', starting at line 930.)
+## Custom rules / Beta release limitation
 
-HomePage Screenshot:
--------------------
-[Phonebookplus Home Screen](https://raw.githubusercontent.com/agungf/phonebookplus/master/images/desktop_mobile.png)
+- Run on developemnt mode
+- 'Dem	o' user can't be deleted
+- Only admin can manage the phonebook
+- Users register or logging using Facebook ot twitter account can not manage the phonebook
+ 
 
-
-References:
-----------
-And introductory post to phonebookplus: [Introduction To CodeIgniterplus](http://codesamplez.com/project/codeigniter-bundle )
-
-Future Considerations:
-----------------------
-
-- Front End enhancements: integrate [requirejs](http://requirejs.org/), [angularjs](https://angularjs.org/), [grunt](http://gruntjs.com/).
-- Unit Tests: add necessary [PHPUnit](http://phpunit.de/) tests for custom classes.
-- Acceptance/Functional Test: Using [Codeception](http://codeception.com/).
-- Support for other view engine: Current view engine logic already seperated to MY_Controller class. Additional logic should be integrated to generalize view engine choice, so that developers can use other engines they like, such as [twig](http://twig.sensiolabs.org/) 
-
-Your Contribution
--------------------
-
-- [Report a bug](https://github.com/agungf/phonebookplus/labels/bug)
-- [Feature Suggestion](https://github.com/agungf/phonebookplus/labels/enhancement)
-
-You can choose from the above 'Future considerations' section as well. In that case, you can optionally create a [issue](https://github.com/agungf/phonebookplus/issues) mentioning which feature you want to work on. Then, fork the repo, implement the feature/make changes and create a pull request. Thanks!
-
+## Todo
+- Angular js integration
+- REST API layer
+-  run on production mode which is minified and optimized documents and assets
+	 
