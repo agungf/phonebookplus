@@ -10,9 +10,9 @@ Another Phonebook sharing apps plus plus
 
 ## The  stack
 
-- bootstrap frontend
-- Mysql database persistent data layer using mongoose
-- PHP Codeigniter backend framework with smarty template engine and Doctrin ORM 
+- Bootstrap frontend and Jquery via  Bower package manager.
+- PHP Codeigniter backend framework with integrated Smarty templating engine, Hybrid_Auth library and Doctrin ORM via PHP Composer.
+- Mysql database persistent data layer via Doctrin
 - Docker container isolated environment deployed with Fig on Azure cloud
 
 ## Features
