@@ -28,12 +28,13 @@ ADD . /app
 WORKDIR /app
 
 ADD docker-files/makefile /app/makefile
-RUN cd /app && make
+#RUN cd /app && make
 
 ADD docker-files/database.php /app/application/config/database.php
 ADD docker-files/run.sh /run.sh
 ADD docker-files/.htaccess /app/.htaccess
 ADD docker-files/create_mysql_admin_user.sh /create_mysql_admin_user.sh
+
 RUN chmod 755 /*.sh
 
 EXPOSE 80 3306

@@ -23,7 +23,10 @@
     </table>       
 <br />
 <div class="clear">
+<ul class="pagination">
 {$pagination_helper->create_links()}
+</ul>
+</div>
 &nbsp;
 <input type="submit" name="delete" value="Delete selected"  class="btn btn-danger"  />
 </div>

@@ -27,7 +27,7 @@ class Mysmarty extends Smarty
         $this->template_dir = realpath(APPPATH."/views/");
         $this->config_dir = realpath(APPPATH."/conf/");
         $this->compile_dir = realpath(APPPATH."/cache/");
-        $this->clearAllCache();
+        //$this->clearAllCache();
         $this->caching = 0; 
     }
 
