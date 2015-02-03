@@ -40,8 +40,12 @@ class Pbook extends Admin_Controller
         {
             $pagingConfig   = $this->paginationlib->initPagination("/admin/pbook/index",$this->pbookmodel->get_count());
             $this->data["pagination_helper"]   = $this->pagination;
-            $this->data["messages"] = $this->pbookmodel->get_by_range($start_record,$pagingConfig['per_page']);
-            
+            //$this->data["messages"] = $this->pbookmodel->get_by_range($start_record,$pagingConfig['per_page']);
+            $searchTerm = array();            
+            if($this->input->post("searchTerm") != null){
+                $searchTerm = $searchTerm + array("name"=>$this->input->post("searchTerm"));
+            };
+            $this->data["messages"] = $this->pbookmodel->get_by_range($start_record,$pagingConfig['per_page'],$searchTerm);
             return $this->view();             
         }
         catch (Exception $err)

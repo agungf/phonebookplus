@@ -1,3 +1,15 @@
+<form name='search' action="{$base_url}admin/pbook/index/" method='post'>
+<div class="row">
+  <div class="col-lg-6 pull-right">
+    <div class="input-group">
+      <input name="searchTerm" type="text" class="form-control" placeholder="Search for Name">
+      <span class="input-group-btn">
+        <input type='submit'  name='search' value='Search' class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+</form>
 <form action="{$base_url}admin/pbook/delete" method="POST">
     <table cellspacing="0" cellpadding="4" border="0" class="table">
         <thead>
