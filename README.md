@@ -10,7 +10,7 @@ Another Phonebook sharing apps plus plus
 
 ## The  stack
 
-- Bootstrap frontend and Jquery via  Bower package manager.
+- Bootstrap frontend via  Bower package manager.
 - PHP Codeigniter backend framework with integrated Smarty templating engine, Hybrid_Auth library and Doctrin ORM via PHP Composer.
 - Mysql database persistent data layer via Doctrin
 - Docker container isolated environment deployed with Fig on Azure cloud
@@ -35,22 +35,20 @@ Another Phonebook sharing apps plus plus
   
 - Pagination
   
-  It needs to have a pagination for the records which are more than 10 on page. tobe improvend using angular
+  It needs to have a pagination for the records which are more than 10 on page
   
 - Search
 
-  Next will be implemented using angular for better UI/UX like http://udock.cloudapp.net:9000/phonebook
+  Based on name
 
 ## Custom rules / Beta release limitation
 
 - Run on developemnt mode
-- 'Dem	o' user can't be deleted
-- Only admin can manage the phonebook
-- Users register or logging using Facebook ot twitter account can not manage the phonebook
+- Can only search for based on exact name
+- Some weird unresolved CI pagination behaviour
  
 
 ## Todo
-- Angular js integration
-- REST API layer
--  run on production mode which is minified and optimized documents and assets
+- Add search term other than name (email, date added, note)
+- Fixing pagination weird behaviour
 	 
